@@ -1,0 +1,37 @@
+{% assign img_url = include.image-path %}
+{% assign gradient_direction = include.gradient-direction | default: 'to right' %}
+{% assign fade_start = include.fade-start | default: '0%' %}
+{% assign fade_end = include.fade-end | default: '60%' %}
+{% assign bg_color = include.bg-color | default: 'var(--bg-page)' %}
+
+{::nomarkdown}
+</div>
+{:/nomarkdown}
+
+<div class="jumbotron-gradient" style="
+      {% if include.height %}height: {{ include.height }};{% endif %}
+      background-image:
+        linear-gradient({{ gradient_direction }},
+          {{ bg_color }} {{ fade_start }},
+          transparent {{ fade_end }}),
+        url('{{ site.baseurl }}{{ img_url }}');
+      background-size: cover;
+      background-position: {{ include.background-position | default: 'center right' }};
+      background-repeat: no-repeat;">
+
+    <div class="jumbotron-content">
+      {% if include.title %}
+      <h2>{{ include.title }}</h2>
+      {% endif %}
+
+      {% if include.text %}
+      <div class="jumbotron-text">
+        {{ include.text | markdownify }}
+      </div>
+      {% endif %}
+    </div>
+</div>
+
+{::nomarkdown}
+<div class="container">
+{:/nomarkdown}

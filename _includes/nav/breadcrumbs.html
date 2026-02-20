@@ -1,0 +1,15 @@
+<ol class="breadcrumb">
+  <li><a href="{{ site.baseurl }}/">Home</a></li>
+  {% assign segments = page.url | split: '/' %}
+  {% assign path = site.baseurl %}
+  {% for segment in segments %}
+    {% if segment != "" and segment != "index.html" and segment != "index.md" %}
+      {% assign path = path | append: '/' | append: segment %}
+      {% if forloop.last %}
+        <li class="active">{{ segment | replace: '-', ' ' | replace: '.html', '' | replace: '.md', '' | capitalize }}</li>
+      {% else %}
+        <li><a href="{{ path }}">{{ segment | replace: '-', ' ' | replace: '.html', '' | replace: '.md', '' | capitalize }}</a></li>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+</ol>

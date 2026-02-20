@@ -1,0 +1,14 @@
+# Image manifest for Chiles scrollstory
+# Run: python scripts/fetch_commons_images.py --manifest essays/campus_legends_chile/images/manifest.yml
+
+default_limit: 3
+images:
+  - query: "chile pepper dried"
+    prefix: "carousel"
+    limit: 3
+  - query: "red chile ristra"
+    prefix: "figure"
+    limit: 1
+  - query: "chile harvest"
+    prefix: "bg"
+    limit: 1

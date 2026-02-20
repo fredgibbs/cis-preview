@@ -1,0 +1,50 @@
+{% comment %}
+  Card Grid Component
+  
+  Usage:
+    {% include nav/card-grid.html cards=pages show-tags=true %}
+  
+  Parameters:
+    - cards: array of page/card objects to display
+    - show-tags: (optional, default true) whether to display tags on cards
+    - grid-class: (optional) additional CSS classes for the grid
+    - tag-data: (optional, default false) add data-tags attribute for filtering
+{% endcomment %}
+
+{% assign show_tags = include.show-tags | default: true %}
+{% assign grid_class = include.grid-class | default: "" %}
+{% assign tag_data = include.tag-data | default: false %}
+
+<div class="card-grid {{ grid_class }}">
+  {% for card in include.cards %}
+  {% if card.title %}
+    {% assign card_image = card.thumbnail %}
+    {% assign card_href = card.link | default: card.url %}
+    {% assign card_summary = card.summary | default: card.description | default: card.excerpt | strip_html | truncate: 160 %}
+    {% if tag_data and card.tags %}
+      {% assign page_tags = card.tags | join: "|" | downcase %}
+    {% endif %}
+    <article class="card v-card{% if tag_data %} tag-card{% endif %}"{% if tag_data and page_tags %} data-tags="{{ page_tags }}"{% endif %}>
+      <a class="card-link" href="{{site.baseurl}}{{ card_href }}">
+        {% if card_image %}
+          {% capture card_image_url %}{% include images/image-path.html image-path=card_image page-dir=card.dir %}{% endcapture %}
+          <img class="card-img-top" src="{{ card_image_url | strip }}" alt="{{ card.title | escape }}">
+        {% endif %}
+        <div class="card-body">
+          <div>
+            <h3>{{ card.title }}</h3>
+            <p class="card-text">{{ card_summary }}</p>
+          </div>
+          {% if show_tags and card.tags %}
+            <div class="tags">
+              {% for t in card.tags %}
+                <span class="tag-pill">{{ t }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+      </a>
+    </article>
+  {% endif %}
+  {% endfor %}
+</div>

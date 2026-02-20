@@ -1,0 +1,27 @@
+{% assign carousel_id = include.id | default: 'carouselExample' %}
+<div id="{{ carousel_id }}" class="carousel slide {{ include.class }}"
+  style="width: {{ include.width | default: '100%' }};">
+  <div class="carousel-inner">
+    {% for image in include.images %}
+    {% capture img_url %}
+    {% include images/image-path.html image-path=image %}
+    {% endcapture %}
+    <div class="carousel-item {% if forloop.first %}active{% endif %}">
+      <img src="{{ img_url | strip }}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        {% assign index = forloop.index | minus: 1 %}
+        <h5>{{ include.headers[index] }}</h5>
+        <p>{{ include.captions[index] }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#{{ carousel_id }}" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#{{ carousel_id }}" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> 

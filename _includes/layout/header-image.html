@@ -1,0 +1,23 @@
+<!-- 
+ This include file is called from the base layout (_layouts/base.html)
+ It is used to display the header of essays, which includes the title, subtitle, and an optional image.
+ The YML header of the page should include:
+   - title: The title of the essay
+   - subtitle: The subtitle of the essay (optional)
+   - image-url: The URL of the header image (optional)
+   - abs-image-url: An absolute URL for the image (optional)
+ -->
+
+{% capture img_url %}
+{% include images/image-path.html image-path=include.image-path %}
+{% endcapture %}
+
+{% assign img_url = img_url | strip %}
+
+<div class="jumbotron" style="      
+      height: {{ include.height | default: '40vh' }}; 
+      background-image: url('{{ img_url }}');
+      background-position: {{ include.background-position }};">
+    <h1 id="page-title">{{ include.title}}</h1>
+    <h2 id="page-subtitle">{{ include.text }}</h2>
+</div>

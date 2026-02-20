@@ -1,0 +1,24 @@
+/*****************************************************
+DOCS - Styles for /docs/ reference and guide pages
+*****************************************************/
+
+/* Consistent column widths for reference tables.
+   Most docs tables follow a Field | Example | What it does pattern.
+   First column (Field/Layout names) is always short code, so we pin
+   it narrow and prevent wrapping. Second column gets a fixed share.
+   Third column (description) takes the remaining space. */
+
+table {
+  table-layout: fixed;
+}
+
+table th:first-child,
+table td:first-child {
+  width: 18%;
+  white-space: nowrap;
+}
+
+table th:nth-child(2),
+table td:nth-child(2) {
+  width: 36%;
+}

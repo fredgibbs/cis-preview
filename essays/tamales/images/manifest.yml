@@ -1,0 +1,14 @@
+# Image manifest for Tamales scrollstory
+# Run: python scripts/fetch_commons_images.py --manifest essays/tamales/images/manifest.yml
+
+default_limit: 3
+images:
+  - query: "tamale mexican food plate"
+    prefix: "carousel"
+    limit: 3
+  - query: "corn husks wrapped food"
+    prefix: "figure"
+    limit: 1
+  - query: "kitchen cooking preparation"
+    prefix: "bg"
+    limit: 1

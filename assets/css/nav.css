@@ -1,0 +1,232 @@
+/*****************************************************
+NAVIGATION
+*****************************************************/
+
+@media screen {
+
+/*****************************************************
+TOPNAV
+*****************************************************/
+
+.navbar {
+  /* Box Model */
+  padding: 0.15rem var(--spacing-sm);  /* Compact modern height ~48-50px */
+
+  /* Typography */
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-on-dark) !important;
+
+  /* Visual */
+  background-color: var(--bg-nav) !important;
+  border-bottom: 1px solid var(--accent-border);
+}
+
+.navbar-brand {
+  /* Typography */
+  font-size: 1.1rem;
+  font-weight: 600 !important;
+  color: var(--text-on-dark) !important;  /* Explicit color for template users */
+  text-decoration: none;
+
+  /* Visual */
+  border-bottom: none;
+}
+
+.navbar-brand:hover {
+  /* Typography */
+  color: var(--text-on-dark) !important;
+}
+
+.navbar-toggler {
+  /* Visual */
+  border-color: var(--text-on-dark);
+}
+
+.navbar-toggler:focus {
+  /* Visual */
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+}
+
+.navbar-toggler-icon {
+  /* Visual - Use Bootstrap's icon but with custom color */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(232, 228, 223, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Large screens: center brand + nav links as a group */
+@media (min-width: 992px) {
+  .navbar > .container-fluid {
+    justify-content: center;
+  }
+
+  .navbar .navbar-collapse {
+    flex-grow: 0;
+  }
+}
+
+.navbar-nav {
+  /* Display */
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-sm);
+}
+
+/* Use Bootstrap's .nav-link class for consistency */
+.nav-link {
+  /* Box Model */
+  display: inline-block;
+  padding: 0.3rem var(--spacing-sm);
+
+  /* Typography */
+  text-decoration: none;
+  color: var(--text-on-dark) !important;
+
+  /* Visual */
+  border-radius: var(--radius-sm);
+
+  /* Interactivity */
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.nav-link:visited {
+  /* Typography */
+  color: var(--text-on-dark) !important;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  /* Typography */
+  color: var(--interactive-hover) !important;
+}
+
+
+ul .dropdown-menu {
+  /* Box Model */
+  padding: 0.25rem 0 !important;
+
+  /* Visual */
+  background-color: var(--bg-nav) !important;
+  border: 1px solid var(--border-light) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.dropdown-item {
+  /* Box Model */
+  padding: 0.25rem 0.75rem !important;
+
+  /* Typography */
+  font-size: 0.85rem !important;
+  line-height: 1.3 !important;
+  color: var(--text-on-dark) !important;
+  text-decoration: none !important;
+
+  /* Visual */
+  background: transparent !important;
+  border-left: 2px solid transparent !important;
+
+  /* Interactivity */
+  transition: border-color var(--transition-fast) !important;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  /* Typography */
+  color: var(--interactive-hover) !important;
+
+  /* Visual */
+  background: transparent !important;
+  border-left-color: var(--interactive-hover) !important;
+}
+
+.dropdown-divider {
+  /* Box Model */
+  margin: 0.1rem 0 !important;
+
+  /* Visual */
+  border-color: var(--text-on-dark) !important;
+  opacity: 0.3 !important;
+}
+
+.nav-link.dropdown-toggle.show {
+  /* Typography */
+  color: var(--text-on-dark);
+
+  /* Visual */
+  background-color: transparent;
+}
+
+
+/*****************************************************
+SIDENAV - See nav-left.css and nav-profile.css for sidebar styling
+*****************************************************/
+
+
+
+
+
+/*****************************************************
+BREADCRUMB NAVIGATION
+*****************************************************/
+.breadcrumb-nav-list {
+  /* Display */
+  display: flex;
+  list-style: none;
+  gap: 8px;
+  
+  /* Box Model */
+  margin: 0 0 16px 0;
+  padding: 0;
+}
+
+.breadcrumb-nav-list-item a {
+  /* Typography */
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--info);
+}
+
+.breadcrumb-nav-list-item span {
+  /* Typography */
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+
+} /* end media screen */
+
+
+.navbar-workshop-toggle {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  padding: 0 1rem;
+}
+
+.navbar-workshop-toggle .form-switch {
+  margin: 0;
+}
+
+.navbar-workshop-toggle .form-check-input {
+  cursor: pointer;
+}
+
+.navbar-workshop-toggle .form-check-label {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--bs-navbar-color);
+}
+
+
+/*****************************************************************************/
+/*
+/* SMALL SCREEN
+/*
+/*****************************************************************************/
+
+@media (max-width: 768px) {
+  .navbar-workshop-toggle {
+    padding: 0.5rem 1rem;
+    border-top: 1px solid var(--border-light);
+  }
+}

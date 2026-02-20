@@ -1,0 +1,14 @@
+# Image manifest for Nachos ScrollStory
+# Run: python scripts/fetch_commons_images.py --manifest essays/nachos/images/manifest.yml
+
+default_limit: 3
+images:
+  - query: "nachos"
+    prefix: "carousel"
+    limit: 5
+  - query: "nachos closeup"
+    prefix: "figure"
+    limit: 2
+  - query: "nachos cooking"
+    prefix: "bg"
+    limit: 2

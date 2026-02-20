@@ -1,0 +1,494 @@
+/* Typography styles - fonts imported in base.css */
+
+@media screen {
+
+/*****************************************************
+TYPOGRAPHY
+*****************************************************/
+
+html, body {
+  /* Typography */
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-body);
+}
+
+h1, h2, h3, h4, h5 {
+  /* Typography */
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-align: left;
+  letter-spacing: -0.02em;
+}
+
+/* Heading color hierarchy - variety with restraint */
+h1 {
+  color: var(--golden-clay);  /* Warm accent for top-level emphasis */
+  font-weight: 700;           /* Bolder for more presence */
+}
+
+h2 {
+  color: var(--sage);         /* Mid-tone sage - softer contrast */
+  font-weight: 600;
+}
+
+h3 {
+  color: var(--sage-deep);    /* Deep sage for subsections */
+}
+
+h4 {
+  color: var(--sage-dark);    /* Darker for minor headings */
+}
+
+h5 {
+  color: var(--golden-clay-dark);  /* Darker warm clay for emphasis */
+}
+
+h6 {
+  color: var(--text-body);    /* Default body color */
+}
+
+h1 {
+  /* Box Model */
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-xs);
+
+  /* Typography */
+  font-size: 2.25rem;  /* 36px - modern standard */
+}
+
+h2 {
+  /* Box Model */
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+
+  /* Typography */
+  font-size: 1.75rem;  /* 28px - modern standard */
+}
+
+h3 {
+  /* Box Model */
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-xs);
+
+  /* Typography */
+  font-size: 1.5rem;  /* 24px - modern standard */
+}
+
+h4 {
+  /* Box Model */
+  margin-top: var(--spacing-md);
+  margin-bottom: 0.8rem;
+
+  /* Typography */
+  font-size: 1.25rem;  /* 20px - modern standard */
+}
+
+h5 {
+  /* Box Model */
+  margin-top: var(--spacing-xs);
+  margin-bottom: 0.25rem;
+
+  /* Typography */
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+hr {
+  /* Display */
+  display: block;
+  
+  /* Box Model */
+  height: 0;
+  margin: var(--spacing-xl) 0;
+  clear: both;
+  
+  /* Visual */
+  border: 4px solid var(--text-body);
+}
+
+p {
+  /* Box Model */
+  margin-bottom: var(--spacing-md);
+
+  /* Typography */
+  line-height: 1.6em;
+  text-align: justify;
+}
+
+/* Reduce spacing between paragraphs and lists */
+p:has(+ ul),
+p:has(+ ol) {
+  margin-bottom: var(--spacing-xs);
+}
+
+ul, ol {
+  /* Box Model */
+  margin-top: 0;
+  margin-bottom: var(--spacing-md);
+  padding-left: 2rem;
+
+  /* Typography */
+  font-size: 0.95rem;
+}
+
+a {
+  /* Typography */
+  text-decoration: none;
+  color: var(--accent-primary);
+
+  /* Visual */
+  border-bottom: 1px dotted var(--accent-primary);
+}
+
+a:visited {
+  /* Typography */
+  color: var(--accent-primary);
+
+  /* Visual */
+  border-bottom: 1px dotted var(--accent-primary);
+}
+
+a:hover {
+  /* Typography */
+  text-decoration: none;
+}
+
+.map-card {
+  /* Box Model */
+  margin-top: var(--spacing-xs);
+  
+  /* Typography */
+  font-family: var(--font-body);
+  font-weight: normal;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  text-align: justify;
+  color: var(--text-body);
+}
+
+.container li {
+  /* Box Model */
+  margin: 0 0 var(--spacing-xs) 0;
+  padding: 0;
+  
+  /* Typography */
+  line-height: 1.7rem;
+}
+
+/*****************************************************
+TABLES
+*****************************************************/
+
+table {
+  /* Box Model */
+  width: 100%;
+  margin-bottom: var(--spacing-lg);
+
+  /* Visual */
+  border-collapse: collapse;
+}
+
+th,
+td {
+  /* Box Model */
+  padding: 0.6rem 1rem;
+
+  /* Typography */
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+th {
+  /* Typography */
+  font-weight: 600;
+  color: var(--sage-deep);
+
+  /* Visual */
+  border-bottom: 2px solid var(--sage-pale);
+}
+
+td {
+  /* Visual */
+  border-bottom: 1px solid var(--warm-light);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+
+/*****************************************************
+CODE BLOCKS
+*****************************************************/
+
+.highlight {
+  /* Display */
+  overflow-x: auto;
+
+  /* Box Model */
+  margin: var(--spacing-sm) 0;
+  padding: var(--spacing-xs);
+
+  /* Visual */
+  background: var(--bg-code);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.highlight pre {
+  /* Box Model */
+  margin: 0;
+  padding: 0;
+
+  /* Typography */
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-body);
+}
+
+
+/*****************************************************
+FOOTNOTE STYLING
+*****************************************************/
+
+/* Footnote reference buttons (superscript numbers) */
+.littlefoot__button {
+  /* Display & Positioning */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -0.15em;
+
+  /* Box Model */
+  width: 1.2rem;
+  height: 1.2rem;
+  padding: 0;
+  margin: 0 0.15em;
+
+  /* Typography */
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  color: white;
+
+  /* Visual */
+  background: var(--accent-primary);
+  border: 1px solid var(--accent-primary);
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  opacity: 0.6;
+
+  /* Interactivity */
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.littlefoot__button:hover,
+.littlefoot__button:focus {
+  /* Typography */
+  color: white;
+
+  /* Visual */
+  background: var(--interactive-hover);
+  border-color: var(--interactive-hover);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  outline: none;
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Footnote popup styling */
+.littlefoot__popover {
+  /* Box Model */
+  max-width: 28rem;
+  padding: 0;
+  margin: 0.5rem 0;
+
+  /* Visual */
+  background: var(--bg-card);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.littlefoot__content {
+  /* Box Model */
+  padding: 1rem;
+
+  /* Typography */
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-body);
+}
+
+.littlefoot__content p {
+  /* Box Model */
+  margin: 0 0 0.5rem 0;
+}
+
+.littlefoot__content p:last-child {
+  margin-bottom: 0;
+}
+
+
+
+/*****************************************************
+BLOCKQUOTE
+*****************************************************/
+
+blockquote {
+  /* Box Model */
+  max-width: 80%;
+  margin: var(--spacing-sm) auto;
+  padding: var(--spacing-xs);
+  
+  /* Typography */
+  font-size: 120%;
+  font-style: italic;
+  quotes: """ """ "'" "'";
+  
+  /* Visual */
+  border-left: 4px solid var(--text-muted);
+}
+
+
+
+/*****************************************************
+PULLQUOTES
+*****************************************************/
+
+.pullquote {
+  /* Box Model */
+  margin: 1em auto;
+  padding: 1em;
+
+  /* Typography */
+  color: var(--text-body);
+
+  /* Visual */
+  border-top: 4px solid var(--golden-clay);
+  border-bottom: 4px solid var(--golden-clay);
+}
+
+.pullquote p {
+  /* Typography */
+  font-family: var(--font-body);
+  font-size: 1.4rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+
+} /* end regular styles */
+
+
+/* tablet styles */
+@media screen and (min-width: 34em) {
+  .pullquote {
+    float: left;
+    width: 50%;
+    padding: 1.2em 0 1.2em 0;
+    margin: .8em 2em .8em 0;
+  }
+
+  .pullquote.right {
+    float: right;
+    margin: .8em 0 .8em 2em;
+  }
+}
+
+
+/* desktop styles */
+@media screen and (min-width: 1280px) {
+  .pullquote {
+    margin-left: -10%;
+  }
+
+  aside.right {
+    margin-left: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  aside p {
+    margin: 0;
+  }
+
+}
+
+
+
+/*****************************************************************************/
+/*
+/* SMALL SCREEN
+/*
+/*****************************************************************************/
+
+@media (max-width: 768px) {
+
+  /* Reduce base font size for mobile */
+  html, body {
+    font-size: 1rem;
+  }
+
+  /* Scale down headings for mobile */
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+  }
+
+  /* Make pullquotes and blockquotes full width on mobile */
+  .pullquote {
+    float: none !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .pullquote p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  blockquote {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: var(--spacing-xs) var(--spacing-sm) !important;
+  }
+
+  aside {
+    position:relative;
+    width:100%;
+    padding: .4em;
+    margin-bottom:1em;
+  }
+
+  aside.aside-right {
+    margin-left:0;
+    left:0;
+    width:100%;
+  }
+
+  aside p{
+    margin:0;
+  }
+}
