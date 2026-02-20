@@ -1,6 +1,6 @@
 ---
 title: Color Palette Comparison
-layout: xanthan
+layout: base-unm
 date: 2024-12-02
 ---
 

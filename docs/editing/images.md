@@ -1,6 +1,6 @@
 ---
 title: Images
-layout: xanthan
+layout: base-unm
 header-image: /assets/images/backgrounds/lake-1.jpg
 header-height: 60vh
 date: 2026-02-14

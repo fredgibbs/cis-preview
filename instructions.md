@@ -1,6 +1,6 @@
 ---
 title: Template Instructions for Students
-layout: base
+layout: base-unm
 ---
 
 # Getting Started with Your Class Project Site

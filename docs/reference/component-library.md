@@ -1,6 +1,6 @@
 ---
 title: Component Library
-layout: xanthan
+layout: base-unm
 date: 2026-02-14
 ---
 

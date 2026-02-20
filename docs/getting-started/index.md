@@ -1,5 +1,5 @@
 ---
-layout: xanthan
+layout: base-unm
 title: Create Your Site
 date: 2025-10-07
 summary: Create your Xanthan site in 10 minutes with this step-by-step guide.

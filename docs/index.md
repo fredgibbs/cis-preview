@@ -1,6 +1,6 @@
 ---
 title: Documentation
-layout: base
+layout: base-unm
 date: 2026-01-04
 summary: Complete documentation for the Xanthan framework
 ---
