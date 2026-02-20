@@ -1,6 +1,6 @@
 ---
 title: "Southwest Snack Histories"
-layout: base
+layout: base-unm
 date: 2025-10-21
 ---
 

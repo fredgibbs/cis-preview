@@ -1,5 +1,5 @@
 ---
-layout: xanthan
+layout: base-unm
 title: Add an Image
 date: 2026-02-14
 ---

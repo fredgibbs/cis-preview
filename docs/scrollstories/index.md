@@ -1,6 +1,6 @@
 ---
 title: ScrollStories
-layout: xanthan
+layout: base-unm
 date: 2019-10-05
 ---
 

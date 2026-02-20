@@ -1,5 +1,5 @@
 ---
-layout: xanthan
+layout: base-unm
 title: Using Tags
 summary: How to use the tagging system in Xanthan
 date: 2026-01-29
@@ -36,7 +36,7 @@ The tags page (`/tags/`) is configured in its frontmatter:
 
 ```yaml
 ---
-layout: base
+layout: base-unm
 title: Tags
 summary: Browse by tags
 permalink: /tags/
@@ -72,7 +72,7 @@ By default, the tags page looks for pages in `/scrollstories/`. To change this, 
 **Single folder:**
 ```yaml
 ---
-layout: base
+layout: base-unm
 title: Tags
 permalink: /tags/
 tag-folders: scrollstories
@@ -84,7 +84,7 @@ Change `scrollstories` to your preferred folder, like `essays` or `projects`.
 **Multiple folders:**
 ```yaml
 ---
-layout: base
+layout: base-unm
 title: Tags
 permalink: /tags/
 tag-folders: scrollstories, essays, projects

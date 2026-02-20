@@ -1,6 +1,6 @@
 ---
 title: Typography
-layout: xanthan
+layout: base-unm
 date: 2019-04-23
 ---
 

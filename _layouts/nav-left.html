@@ -3,7 +3,13 @@
 
 {% include html/html-head.html %}
 
+<!-- UNM styles -->
+<link href="//webcore.unm.edu/v2/css/unm-styles.min.css" rel="stylesheet" />
+<link href="https://www.unm.edu/assets/css/site-styles.css" media="screen" rel="stylesheet" type="text/css" />
+
 <body>
+
+  {% include unm/nav-unm.html %}
 
   <div class="left-bar">
     {% include nav/nav-left.html %}
@@ -17,11 +23,11 @@
       {{ content }}
     </div>
     
-    {% include layout/footer.html %}
-
   </div> <!-- main-content -->
 
   {% include html/html-js.html %}
+
+  {% include unm/footer-unm.html %}
 
 </body>
 </html>

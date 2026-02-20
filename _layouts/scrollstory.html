@@ -3,8 +3,14 @@
 
   {% include html/html-head.html %}
 
+  <!-- UNM styles -->
+  <link href="//webcore.unm.edu/v2/css/unm-styles.min.css" rel="stylesheet" />
+  <link href="https://www.unm.edu/assets/css/site-styles.css" media="screen" rel="stylesheet" type="text/css" />
+
   <body>
-    
+
+    {% include unm/nav-unm.html %}
+
     <div class="page-wrap">
       
     {% include nav/nav-top.html %}
@@ -31,13 +37,13 @@
       {{ content }}
     </div> <!-- /container -->
 
-    {% include layout/footer.html %}
-
     </div> <!-- /page-wrap -->
 
     {% if jekyll.environment == 'production' and site.analytics_id %}{% include google_analytics.html %}{% endif %}
 
     {% include html/html-js.html %}
+
+    {% include unm/footer-unm.html %}
 
   </body>
 </html>

@@ -1,5 +1,5 @@
 ---
-layout: xanthan
+layout: base-unm
 title: Themes
 ---
 

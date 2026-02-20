@@ -1,5 +1,5 @@
 ---
-layout: xanthan
+layout: base-unm
 title: Site Structure
 author: Fred Gibbs
 date: 2019-10-03

@@ -1,0 +1,24 @@
+<div id="nav">
+  <div class="container">
+    <div class="navbar navbar-top" id="horiz-nav">
+      <nav aria-label="Horizontal" class="navbar-collapse collapse" id="horz-nav">
+        <ul class="nav navbar-nav" role="menubar">
+          {% for item in site.data.nav-top %}
+            {% if item.items %}
+              <li class="dropdown" role="menuitem">
+                <a aria-haspopup="true" class="dropdown-toggle" data-toggle="dropdown" href="{{ site.baseurl }}{{ item.url | default: '#' }}">{{ item.title }}</a>
+                <ul class="dropdown-menu" role="menu">
+                  {% for subitem in item.items %}
+                    <li role="menuitem"><a href="{{ site.baseurl }}{{ subitem.url }}">{{ subitem.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              </li>
+            {% else %}
+              <li role="menuitem"><a href="{{ site.baseurl }}{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

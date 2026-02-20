@@ -1,6 +1,6 @@
 ---
 title: Essays
-layout: base
+layout: base-unm
 header-title: Essays
 ---
 
