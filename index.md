@@ -10,23 +10,22 @@ date: 2025-10-21
   title=""
 %}
 
-# 🌶️ Welcome to the Great Southwest Snack-Off
 
-{% include images/figure.html
-  class="right"
-  width="33%"
-  caption="Field researchers testing nacho stability (for science)."
-  image-path="/assets/images/duke-ellington-nyc.jpg"
-  source-url="https://commons.wikimedia.org/wiki/File:Xanthan.svg"
-%}
+## Welcome to the College of Interdisciplinary Studies (CIS)
 
-This semester’s class project asked students to **trace the hidden histories of Southwest foods**—and to use every storytelling gadget in the Xanthan toolbox. The result? Three scroll-friendly essays that double as demos for figures, pull quotes, scrolly backgrounds, and carousels.
+The College of Interdisciplinary Studies can take you from where you currently are to where you want to be! Our mission is to provide collaborative opportunities for integrative learning that foster personal, academic, and professional excellence.
 
-What you’ll find:
-- Nachos: the 1943 border-café improvisation that became America’s most democratic snack
-- Chiles: how a Mesoamerican plant became the badge of Southwestern identity (heat, pride, and capsaicin chemistry)
-- Tamales: communal labor, ritual calendars, and why wrapped food still feels sacred
+By delivering academically rich undergraduate programs that cross departmental and college boundaries, CIS supports incoming students and provides the administrative structure for UNM's most innovative interdisciplinary programs.
 
-**Steal this project for your class:** swap in your own topic, keep the layouts, and let students focus on research, writing, and playful presentation. Everything below is editable; the card grid links directly into the essays.
+### Why CIS?
+* **Integrative Learning:** We connect the dots between disparate fields.
+* **Student Success:** Our [Advisement](/advisement) team is dedicated to exploratory and pre-professional students.
+* **Custom Pathways:** Create a degree as unique as your career goals through our [Interdisciplinary Studies Program](/programs).
 
-<br style="clear: both">
+---
+
+**Contact Us**
+University Advisement & Enrichment Center  
+Building #85 (UAEC), Suite 180  
+Albuquerque, NM 87131  
+(505) 277-0122 | cis@unm.edu
